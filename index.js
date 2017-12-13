@@ -46,16 +46,17 @@ function renderResult(result) {
 function displayGitHubSearchData(data) {
   const results = data.items.map((item, index) => renderResult(item));
   //example of items sent out from data
-  // console.log(data.items[0]);
-  // console.log(data.items[0].snippet.title);
-  // console.log(data.items[0].snippet.channelId);
-  // console.log("TITLE:");
-  // console.log(data.items[0].snippet.channelTitle);
-  // console.log("!!!!!!!!");
-  // console.log(data.items[0].snippet.thumbnails['default']);
-  // console.log('~~~~~~~~');
-  // console.log(data.items[0].snippet.thumbnails.default);
-  // console.log(results);
+  //testing
+  console.log(data.items[0]);
+  console.log(data.items[0].snippet.title);
+  console.log(data.items[0].snippet.channelId);
+  console.log("TITLE:");
+  console.log(data.items[0].snippet.channelTitle);
+  console.log("!!!!!!!!");
+  console.log(data.items[0].snippet.thumbnails['default']);
+  console.log('~~~~~~~~');
+  console.log(data.items[0].snippet.thumbnails.default);
+  console.log(results);
   $('.js-search-results').html(results);
 }
 

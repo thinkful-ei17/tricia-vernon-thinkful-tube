@@ -35,8 +35,8 @@ function renderResult(result) {
       <h2>
       <a class="js-result-name">${result.snippet.title}</a></h2>
       <p>Description: <span class="js-watchers-count">${result.snippet.description}</span></p>
-      <p>Channel Title: <span class="js-issues-count">${result.snippet['channelTitle']}</span></p>
-      
+      <p>Channel Title: <span class="js-issues-count">${result.snippet.channelTitle}</span></p>
+      <img src="${result.snippet.thumbnails.high.url}">
     </div>
   `;
 }
@@ -46,12 +46,16 @@ function renderResult(result) {
 function displayGitHubSearchData(data) {
   const results = data.items.map((item, index) => renderResult(item));
   //example of items sent out from data
-  console.log(data.items[0]);
-  console.log(data.items[0].snippet.title);
-  console.log(data.items[0].snippet.channelId);
-  console.log(data.items[0].snippet['default']);
-  console.log('~~~~~~~~');
-  console.log(results);
+  // console.log(data.items[0]);
+  // console.log(data.items[0].snippet.title);
+  // console.log(data.items[0].snippet.channelId);
+  // console.log("TITLE:");
+  // console.log(data.items[0].snippet.channelTitle);
+  // console.log("!!!!!!!!");
+  // console.log(data.items[0].snippet.thumbnails['default']);
+  // console.log('~~~~~~~~');
+  // console.log(data.items[0].snippet.thumbnails.default);
+  // console.log(results);
   $('.js-search-results').html(results);
 }
 

@@ -1,7 +1,7 @@
 const GITHUB_SEARCH_URL = 'https://api.github.com/search/repositories';
 const YOUTUBE_SEARCH_URL = 'https://www.googleapis.com/youtube/v3/search';
 
-const apiKey = "AIzaSyCAq3BR_9P-dfHlFxLUoTm_tf570UyzfyA";
+const youtubeKey = "AIzaSyCAq3BR_9P-dfHlFxLUoTm_tf570UyzfyA";
 
 function getDataFromApi(searchTerm, callback) {
   const settings = {

@@ -91,7 +91,7 @@ function handleNextPage() {
   $('.next').on('click', event => {
     console.log('handleNextPage');
     if (STORE.next) {
-      getNextDataFromApi(STORE.searchTerm, STORE.next, displayGitHubSearchData);
+      getNextDataFromApi(STORE.searchTerm, STORE.next, displayYouTubeSearchData);
     }
   });
 }
@@ -100,17 +100,13 @@ function handlePreviousPage() {
   $('.prev').on('click', event => {
     console.log('handlePrevPage');
     if (STORE.prev) {
-      getPrevDatafromApi(STORE.searchTerm, STORE.prev, displayGitHubSearchData);
+      getPrevDatafromApi(STORE.searchTerm, STORE.prev, displayYouTubeSearchData);
     }
   });
 }
 
 
-function displayPrevDispayNextData(data) {
-  //
-}
-
-function displayGitHubSearchData(data) {
+function displayYouTubeSearchData(data) {
   const results = data.items.map((item, index) => renderResult(item));
   //example of items sent out from data
   //testing
@@ -147,7 +143,7 @@ function watchSubmit() {
     const query = queryTarget.val();
     // clear out the input
     // queryTarget.val("");
-    getDataFromApi(query, displayGitHubSearchData);
+    getDataFromApi(query, displayYouTubeSearchData);
     STORE.searchTerm = query;
   });
 }

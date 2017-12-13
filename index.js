@@ -5,10 +5,12 @@ const youtubeKey = "AIzaSyCAq3BR_9P-dfHlFxLUoTm_tf570UyzfyA";
 
 function getDataFromApi(searchTerm, callback) {
   const settings = {
-    url: GITHUB_SEARCH_URL,
+    url: YOUTUBE_SEARCH_URL,
     data: {
-      q: `${searchTerm} in:name`,
-      per_page: 5
+      part: "snippet",
+      q: `${searchTerm}`,
+      type: "video",
+      key: youtubeKey
     },
     dataType: 'json',
     type: 'GET',

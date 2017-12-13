@@ -36,7 +36,7 @@ function renderResult(result) {
       <a class="js-result-name">${result.snippet.title}</a></h2>
       <p>Description: <span class="js-watchers-count">${result.snippet.description}</span></p>
       <p>Channel Title: <span class="js-issues-count">${result.snippet.channelTitle}</span></p>
-      <img src="${result.snippet.thumbnails.high.url}">
+      <a href="https://www.youtube.com/watch?v=${result.id.videoId}" target="_blank"><img src="${result.snippet.thumbnails.high.url}"></img></a>
     </div>
   `;
 }
